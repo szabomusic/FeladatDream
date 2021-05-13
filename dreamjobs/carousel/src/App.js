@@ -23,8 +23,8 @@ function App() {
       />)}
      </div>
     <div className='btnContainer'> 
-      <button onClick={()=>{ if(count > 0) setCount(count-1)}}>Hatra</button>
-      <button onClick={()=>{ if(count < 10) setCount(count+1)}}>Elore</button>
+      <button disabled={count === 0} onClick={()=>{ if(count > 0) setCount(count-1)}}>Hatra</button>
+      <button disabled={count === 9} onClick={()=>{ if(count < 10) setCount(count+1)}}>Elore</button>
     </div>
   </div>
   
@@ -41,8 +41,8 @@ function App() {
         />)}
        </div>
       <div className='btnContainer'> 
-        <button onClick={()=>{ if(count > 0) setCount(count-1)}}>Hatra</button>
-        <button onClick={()=>{ if(count < data.length-5) setCount(count+1)}}>Elore</button>
+        <button  disabled={count === 0} onClick={()=>{ if(count > 0) setCount(count-1)}}>Hatra</button>
+        <button disabled={count === data.length-5} onClick={()=>{ if(count < data.length-5) setCount(count+1)}}>Elore</button>
       </div>
     </div>
     
